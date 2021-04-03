@@ -10,11 +10,6 @@ import SwiftyJSON
 import RxSwift
 
 class AnalysisServices {
-    enum AnalysisFailureReason: Int, Error {
-        case unAuthorized = 401
-        case notFound = 404
-    }
-
     func getAnalysisBy(title: String, ingr: [String] ) -> Observable<Recipe?> {
         return Observable.create { observer -> Disposable in
             AFN.request(httpMethod: .post, paramter: ["title":title, "ingr":ingr]) { (response, statucCode, error) in
@@ -25,8 +20,8 @@ class AnalysisServices {
                 }
                 if let err = error {
                     observer.onError(err)
+                    return
                 }
-                
             }
             return Disposables.create()
         }

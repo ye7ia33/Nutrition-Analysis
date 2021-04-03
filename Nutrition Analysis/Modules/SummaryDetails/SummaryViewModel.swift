@@ -40,10 +40,13 @@ class SummaryViewModel {
     private let cell = BehaviorRelay<[TableViewCellType]>(value: [])
     
     let loadInProgress = BehaviorRelay(value: false)
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
     
-    func getAnalysisByTitle(_ title: String, ingr: [String]) {
-        
+    init (_ title: String, ingr: [String]) {
+        guard !title.isEmpty, !ingr.isEmpty else {
+            self.cell.accept([.error(message: "Title and Ingredients Data is empty")])
+            return
+        }
         loadInProgress.accept(true)
         AnalysisServices().getAnalysisBy(title: title, ingr: ingr).subscribe(
             onNext: { [weak self] recipe in

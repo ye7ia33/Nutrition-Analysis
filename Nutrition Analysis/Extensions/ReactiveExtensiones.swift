@@ -26,17 +26,14 @@ extension UIViewController: loadingViewable {
             let dimmedView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
             dimmedView.tag = -1991
             dimmedView.backgroundColor = UIColor.black.withAlphaComponent(0.6)
-            
             let activityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: self.view.frame.midX - 50 / 2,
                                                                               y: self.view.frame.midY - 50 / 2,
                                                                               width: 50 , height: 50), color: .white)
-                    activityIndicatorView.type = .ballClipRotatePulse
-//            activityIndicatorView.type = .pacman
+            activityIndicatorView.type = .ballClipRotatePulse
             dimmedView.addSubview(activityIndicatorView)
             self.view.addSubview(dimmedView)
             activityIndicatorView.startAnimating()
         }
-        
     }
     
     func stopAnimating() {

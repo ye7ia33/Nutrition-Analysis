@@ -39,7 +39,7 @@ class HomeViewController: UIViewController {
             let vc = segue.destination as? SummaryDetailsViewController {
             let title = self.titleTextField.text ?? ""
             let ingr = self.ingrTextView.text.components(separatedBy: "\n").filter { $0 != "" }
-            vc.viewModel.getAnalysisByTitle(title, ingr: ingr)
+            vc.viewModel = SummaryViewModel(title, ingr: ingr)
             return
         }
     }

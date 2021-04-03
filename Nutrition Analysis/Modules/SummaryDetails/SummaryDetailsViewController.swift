@@ -13,12 +13,12 @@ class SummaryDetailsViewController: UIViewController {
 
     @IBOutlet private weak var summaryTableView: UITableView!
     private let disposeBag = DisposeBag()
-    let viewModel = SummaryViewModel()
+    var viewModel: SummaryViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
-        self.viewModel.loadInProgress.bind(to: self.rx.isAnimating).disposed(by: disposeBag)
+        self.viewModel?.loadInProgress.bind(to: self.rx.isAnimating).disposed(by: disposeBag)
     }
     
     private func setupTableView() {
@@ -26,7 +26,7 @@ class SummaryDetailsViewController: UIViewController {
         let nutrientNib = UINib(nibName: "NutrientsTableViewCell", bundle: nil)
         self.summaryTableView.register(summaryNib, forCellReuseIdentifier: String(describing: SummaryTableViewCell.self))
         self.summaryTableView.register(nutrientNib, forCellReuseIdentifier: String(describing: NutrientsTableViewCell.self))
-        self.viewModel.nutrientsCells.bind(to: self.summaryTableView.rx.items) { tableView, index, element in
+        self.viewModel?.nutrientsCells.bind(to: self.summaryTableView.rx.items) { tableView, index, element in
             let indexPath = IndexPath(item: index, section: 0)
             switch element {
             case .normalSummaryCell(cellViewModel: let cellViewModel):
