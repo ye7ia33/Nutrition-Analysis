@@ -37,5 +37,5 @@
 >1 cup chicken broth, homemade or low-sodium canned
 
 
-![Alt Text]()
-![Alt Text]()
+![Alt Text](/screenshots/home.png)
+![Alt Text](/screenshots/analysis.png)
