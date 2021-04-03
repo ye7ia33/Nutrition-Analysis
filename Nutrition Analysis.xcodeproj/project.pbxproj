@@ -12,7 +12,6 @@
 		A81619DC261344B40005572A /* CodableHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81619D0261344B40005572A /* CodableHandler.swift */; };
 		A81619FB261345B70005572A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A81619FA261345B70005572A /* Alamofire */; };
 		A8161A01261345EC0005572A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = A8161A00261345EC0005572A /* SwiftyJSON */; };
-		A8161A0C261347E20005572A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8161A0B261347E20005572A /* ViewModel.swift */; };
 		A8161A14261458220005572A /* AnalysisServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8161A13261458220005572A /* AnalysisServices.swift */; };
 		A8161A1A261458740005572A /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8161A19261458740005572A /* Recipe.swift */; };
 		A8161A46261478990005572A /* SummaryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8161A45261478990005572A /* SummaryDetailsViewController.swift */; };
@@ -62,7 +61,6 @@
 		A81619BD261344930005572A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A81619CF261344B40005572A /* ServerRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerRequest.swift; sourceTree = "<group>"; };
 		A81619D0261344B40005572A /* CodableHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableHandler.swift; sourceTree = "<group>"; };
-		A8161A0B261347E20005572A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		A8161A13261458220005572A /* AnalysisServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisServices.swift; sourceTree = "<group>"; };
 		A8161A19261458740005572A /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		A8161A45261478990005572A /* SummaryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryDetailsViewController.swift; sourceTree = "<group>"; };
@@ -231,7 +229,6 @@
 			children = (
 				A85F517726132C7200634887 /* Config.plist */,
 				A85F517C26132CCF00634887 /* Configure.swift */,
-				A8161A0B261347E20005572A /* ViewModel.swift */,
 			);
 			path = Comman;
 			sourceTree = "<group>";
@@ -414,7 +411,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A81619DB261344B40005572A /* ServerRequest.swift in Sources */,
-				A8161A0C261347E20005572A /* ViewModel.swift in Sources */,
 				A85F51AA261331F700634887 /* UIViewInspectable.swift in Sources */,
 				A81619BE261344930005572A /* HomeViewModel.swift in Sources */,
 				A85F51842613306300634887 /* HomeViewController.swift in Sources */,
