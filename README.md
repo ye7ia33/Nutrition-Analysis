@@ -1,6 +1,10 @@
 **Banque Misr Nutrition Analysis**
 
-******Test Data******
+[References](https://developer.edamam.com/edamam-docs-nutrition-api)
+[API Path](https://api.edamam.com/api/nutrition-details)
+
+
+##Test Data
 
 ******title:******
 
