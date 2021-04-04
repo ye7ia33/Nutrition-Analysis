@@ -10,10 +10,9 @@ import RxSwift
 import RxCocoa
 
 class HomeViewController: UIViewController {
-    var viewModel = HomeViewModel()
     @IBOutlet weak var titleTextField: UITextField! {
         didSet {
-            self.titleTextField.text = "Fresh Ham Roasted With Rye Bread and Dried Fruit Stuffing"
+            self.titleTextField.text = ""
             self.titleTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
         }
     }
